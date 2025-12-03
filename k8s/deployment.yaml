@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: go-hello
-        image: your-dockerhub-username/go-hello:latest
+        image: bomeravi/go-app-test:latest
         ports:
         - containerPort: 8090
         env:
