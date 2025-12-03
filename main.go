@@ -28,7 +28,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if port == "" {
 		port = "8090"
 	}
-	fmt.Fprintf(w, "Hello from Go App!\nServer IP: %s\nPort: %s\n", getLocalIP(), port)
+	fmt.Fprintf(w, "Hello Hello!\nServer IP: %s\nPort: %s\n", getLocalIP(), port)
 }
 
 func main() {
