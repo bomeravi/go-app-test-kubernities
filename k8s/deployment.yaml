@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-hello-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-hello
+  template:
+    metadata:
+      labels:
+        app: go-hello
+    spec:
+      containers:
+      - name: go-hello
+        image: your-dockerhub-username/go-hello:latest
+        ports:
+        - containerPort: 8090
+        env:
+        - name: PORT
+          value: "8090"
